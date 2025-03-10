@@ -13,9 +13,9 @@ interface ServiceProps {
 }
 
 const ServiceCard = ({ icon, title, description, link, className, style }: ServiceProps) => (
-  <div className={cn("service-card bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300", className)} style={style}>
+  <div className={cn("service-card group", className)} style={style}>
     <div>
-      <div className="service-icon p-3 bg-gray-50 rounded-full inline-block mb-4 text-masslawry-blue">{icon}</div>
+      <div className="service-icon">{icon}</div>
       <h3 className="text-xl font-bold mb-2">{title}</h3>
       <p className="text-gray-600 mb-4">{description}</p>
     </div>
