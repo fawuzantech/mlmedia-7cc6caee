@@ -13,9 +13,9 @@ interface ServiceProps {
 }
 
 const ServiceCard = ({ icon, title, description, link, className, style }: ServiceProps) => (
-  <div className={cn("service-card", className)} style={style}>
+  <div className={cn("service-card bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300", className)} style={style}>
     <div>
-      <div className="service-icon">{icon}</div>
+      <div className="service-icon p-3 bg-gray-50 rounded-full inline-block mb-4 text-masslawry-blue">{icon}</div>
       <h3 className="text-xl font-bold mb-2">{title}</h3>
       <p className="text-gray-600 mb-4">{description}</p>
     </div>
@@ -88,8 +88,8 @@ export default function Services() {
             <ServiceCard
               key={service.title}
               {...service}
-              className="opacity-0"
-              style={{ animationDelay: `${0.1 * index}s` }}
+              className="opacity-0 animate-fade-up"
+              style={{ animationDelay: `${0.1 * index}s`, animationFillMode: 'forwards' }}
             />
           ))}
         </div>
