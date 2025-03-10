@@ -1,6 +1,6 @@
 
 import { Link } from "react-router-dom";
-import { Printer, Paintbrush, Globe, Camera, Cube, ArrowRight } from "lucide-react";
+import { Printer, Paintbrush, Globe, Camera, Box, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface ServiceProps {
@@ -9,10 +9,11 @@ interface ServiceProps {
   description: string;
   link: string;
   className?: string;
+  style?: React.CSSProperties;
 }
 
-const ServiceCard = ({ icon, title, description, link, className }: ServiceProps) => (
-  <div className={cn("service-card", className)}>
+const ServiceCard = ({ icon, title, description, link, className, style }: ServiceProps) => (
+  <div className={cn("service-card", className)} style={style}>
     <div>
       <div className="service-icon">{icon}</div>
       <h3 className="text-xl font-bold mb-2">{title}</h3>
@@ -42,7 +43,7 @@ export default function Services() {
       link: "/services/graphic-design"
     },
     {
-      icon: <Cube strokeWidth={1.5} />,
+      icon: <Box strokeWidth={1.5} />,
       title: "Branding & Souvenirs",
       description: "Complete branding packages and custom souvenirs to elevate your brand identity.",
       link: "/services/branding"
@@ -60,7 +61,7 @@ export default function Services() {
       link: "/services/photography"
     },
     {
-      icon: <Cube strokeWidth={1.5} />,
+      icon: <Box strokeWidth={1.5} />,
       title: "3D Signs & Fabrication",
       description: "Custom signage, displays, and fabrication services to make your brand stand out.",
       link: "/services/3d-signs"
