@@ -8,12 +8,20 @@ interface ServiceProps {
   title: string;
   description: string;
   link: string;
+  image: string;
   className?: string;
   style?: React.CSSProperties;
 }
 
-const ServiceCard = ({ icon, title, description, link, className, style }: ServiceProps) => (
+const ServiceCard = ({ icon, title, description, link, image, className, style }: ServiceProps) => (
   <div className={cn("service-card group", className)} style={style}>
+    <div className="mb-4 h-40 overflow-hidden rounded-xl">
+      <img 
+        src={image} 
+        alt={title}
+        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+      />
+    </div>
     <div>
       <div className="service-icon">{icon}</div>
       <h3 className="text-xl font-bold mb-2">{title}</h3>
@@ -34,37 +42,43 @@ export default function Services() {
       icon: <Printer strokeWidth={1.5} />,
       title: "Digital Printing",
       description: "High-quality printing services including large format, merchandising, and custom materials.",
-      link: "/services/digital-printing"
+      link: "/services/digital-printing",
+      image: "https://images.unsplash.com/photo-1562654501-a0ccc0fc3fb1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
     },
     {
       icon: <Paintbrush strokeWidth={1.5} />,
       title: "Graphic Design & 3D Modeling",
       description: "Creative design solutions including logos, branding materials, and 3D visualizations.",
-      link: "/services/graphic-design"
+      link: "/services/graphic-design",
+      image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
     },
     {
       icon: <Box strokeWidth={1.5} />,
       title: "Branding & Souvenirs",
       description: "Complete branding packages and custom souvenirs to elevate your brand identity.",
-      link: "/services/branding"
+      link: "/services/branding",
+      image: "https://images.unsplash.com/photo-1523292562811-8fa7962a78c8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
     },
     {
       icon: <Globe strokeWidth={1.5} />,
       title: "Web Solutions",
       description: "Custom websites, applications, and digital experiences built with modern technologies.",
-      link: "/services/web-solutions"
+      link: "/services/web-solutions",
+      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
     },
     {
       icon: <Camera strokeWidth={1.5} />,
       title: "Photography",
       description: "Professional photography services for products, events, portraits, and commercial use.",
-      link: "/services/photography"
+      link: "/services/photography",
+      image: "https://images.unsplash.com/photo-1542038784456-1ea8e935640e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
     },
     {
       icon: <Box strokeWidth={1.5} />,
       title: "3D Signs & Fabrication",
       description: "Custom signage, displays, and fabrication services to make your brand stand out.",
-      link: "/services/3d-signs"
+      link: "/services/3d-signs",
+      image: "https://images.unsplash.com/photo-1535970793482-07de93762dc4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
     }
   ];
 

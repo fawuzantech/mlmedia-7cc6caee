@@ -23,7 +23,14 @@ const DigitalPrinting = () => {
           </div>
           
           <div className="bg-white rounded-2xl shadow-lg overflow-hidden mb-10">
-            <div className="h-64 bg-gradient-to-r from-masslawry-blue to-masslawry-lightblue"></div>
+            <div className="h-64 relative overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1562654501-a0ccc0fc3fb1" 
+                alt="Digital Printing" 
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-masslawry-blue/80 to-masslawry-lightblue/80"></div>
+            </div>
             <div className="p-8">
               <h2 className="text-2xl font-bold mb-4">High-Quality Print Solutions</h2>
               <p className="text-gray-700 mb-6">
@@ -33,18 +40,46 @@ const DigitalPrinting = () => {
               <div className="grid md:grid-cols-2 gap-6 mb-8">
                 <div className="bg-gray-50 p-6 rounded-xl">
                   <h3 className="font-bold text-lg mb-2">Large Format Printing</h3>
+                  <div className="h-40 rounded-lg overflow-hidden mb-3">
+                    <img 
+                      src="https://images.unsplash.com/photo-1613978513693-124634ba49e3" 
+                      alt="Large Format Printing" 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                   <p className="text-gray-600">Banners, posters, signage, and displays with vibrant colors and sharp details.</p>
                 </div>
                 <div className="bg-gray-50 p-6 rounded-xl">
                   <h3 className="font-bold text-lg mb-2">Business Materials</h3>
+                  <div className="h-40 rounded-lg overflow-hidden mb-3">
+                    <img 
+                      src="https://images.unsplash.com/photo-1574351406668-19e0a67850a7" 
+                      alt="Business Materials" 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                   <p className="text-gray-600">Business cards, letterheads, brochures, flyers, and presentation folders.</p>
                 </div>
                 <div className="bg-gray-50 p-6 rounded-xl">
                   <h3 className="font-bold text-lg mb-2">Marketing Collateral</h3>
+                  <div className="h-40 rounded-lg overflow-hidden mb-3">
+                    <img 
+                      src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0" 
+                      alt="Marketing Collateral" 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                   <p className="text-gray-600">Catalogs, postcards, direct mail, and promotional materials to boost your campaigns.</p>
                 </div>
                 <div className="bg-gray-50 p-6 rounded-xl">
                   <h3 className="font-bold text-lg mb-2">Custom Merchandise</h3>
+                  <div className="h-40 rounded-lg overflow-hidden mb-3">
+                    <img 
+                      src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f" 
+                      alt="Custom Merchandise" 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                   <p className="text-gray-600">T-shirts, mugs, promotional items, and personalized gifts with your branding.</p>
                 </div>
               </div>

@@ -23,7 +23,14 @@ const ThreeDSigns = () => {
           </div>
           
           <div className="bg-white rounded-2xl shadow-lg overflow-hidden mb-10">
-            <div className="h-64 bg-gradient-to-r from-masslawry-orange to-masslawry-blue"></div>
+            <div className="h-64 relative overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1535970793482-07de93762dc4" 
+                alt="3D Signs and Fabrication" 
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-masslawry-orange/80 to-masslawry-blue/80"></div>
+            </div>
             <div className="p-8">
               <h2 className="text-2xl font-bold mb-4">Custom 3D Signs & Fabrication</h2>
               <p className="text-gray-700 mb-6">
@@ -33,18 +40,46 @@ const ThreeDSigns = () => {
               <div className="grid md:grid-cols-2 gap-6 mb-8">
                 <div className="bg-gray-50 p-6 rounded-xl">
                   <h3 className="font-bold text-lg mb-2">3D Business Signs</h3>
+                  <div className="h-40 rounded-lg overflow-hidden mb-3">
+                    <img 
+                      src="https://images.unsplash.com/photo-1622737133809-d95047b9e673" 
+                      alt="3D Business Signs" 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                   <p className="text-gray-600">Dimensional lettering, logo signs, reception signs, and corporate branding elements.</p>
                 </div>
                 <div className="bg-gray-50 p-6 rounded-xl">
                   <h3 className="font-bold text-lg mb-2">Retail Displays</h3>
+                  <div className="h-40 rounded-lg overflow-hidden mb-3">
+                    <img 
+                      src="https://images.unsplash.com/photo-1581075124872-e699649d333d" 
+                      alt="Retail Displays" 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                   <p className="text-gray-600">Product displays, point-of-purchase displays, window displays, and kiosks.</p>
                 </div>
                 <div className="bg-gray-50 p-6 rounded-xl">
                   <h3 className="font-bold text-lg mb-2">Exhibition & Events</h3>
+                  <div className="h-40 rounded-lg overflow-hidden mb-3">
+                    <img 
+                      src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81" 
+                      alt="Exhibition & Events" 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                   <p className="text-gray-600">Trade show booths, event signage, backdrop walls, and promotional elements.</p>
                 </div>
                 <div className="bg-gray-50 p-6 rounded-xl">
                   <h3 className="font-bold text-lg mb-2">Custom Fabrication</h3>
+                  <div className="h-40 rounded-lg overflow-hidden mb-3">
+                    <img 
+                      src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122" 
+                      alt="Custom Fabrication" 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                   <p className="text-gray-600">Prototypes, architectural elements, art installations, and specialty items.</p>
                 </div>
               </div>

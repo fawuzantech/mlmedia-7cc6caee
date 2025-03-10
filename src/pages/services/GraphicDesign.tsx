@@ -23,7 +23,14 @@ const GraphicDesign = () => {
           </div>
           
           <div className="bg-white rounded-2xl shadow-lg overflow-hidden mb-10">
-            <div className="h-64 bg-gradient-to-r from-masslawry-lightblue to-masslawry-orange"></div>
+            <div className="h-64 relative overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1561070791-2526d30994b5" 
+                alt="Graphic Design" 
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-masslawry-lightblue/80 to-masslawry-orange/80"></div>
+            </div>
             <div className="p-8">
               <h2 className="text-2xl font-bold mb-4">Creative Design Solutions</h2>
               <p className="text-gray-700 mb-6">
@@ -33,18 +40,46 @@ const GraphicDesign = () => {
               <div className="grid md:grid-cols-2 gap-6 mb-8">
                 <div className="bg-gray-50 p-6 rounded-xl">
                   <h3 className="font-bold text-lg mb-2">Logo & Brand Identity</h3>
+                  <div className="h-40 rounded-lg overflow-hidden mb-3">
+                    <img 
+                      src="https://images.unsplash.com/photo-1523726491678-bf852e717f6a" 
+                      alt="Logo & Brand Identity" 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                   <p className="text-gray-600">Distinctive logos, color palettes, typography, and comprehensive brand guidelines.</p>
                 </div>
                 <div className="bg-gray-50 p-6 rounded-xl">
                   <h3 className="font-bold text-lg mb-2">Print & Digital Design</h3>
+                  <div className="h-40 rounded-lg overflow-hidden mb-3">
+                    <img 
+                      src="https://images.unsplash.com/photo-1626785774573-4b799315345d" 
+                      alt="Print & Digital Design" 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                   <p className="text-gray-600">Marketing materials, social media graphics, advertisements, and UI/UX design.</p>
                 </div>
                 <div className="bg-gray-50 p-6 rounded-xl">
                   <h3 className="font-bold text-lg mb-2">3D Modeling</h3>
+                  <div className="h-40 rounded-lg overflow-hidden mb-3">
+                    <img 
+                      src="https://images.unsplash.com/photo-1617791160505-6f00504e3519" 
+                      alt="3D Modeling" 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                   <p className="text-gray-600">Product renderings, architectural visualizations, character design, and prototype models.</p>
                 </div>
                 <div className="bg-gray-50 p-6 rounded-xl">
                   <h3 className="font-bold text-lg mb-2">Illustration & Motion</h3>
+                  <div className="h-40 rounded-lg overflow-hidden mb-3">
+                    <img 
+                      src="https://images.unsplash.com/photo-1572044162444-ad60f128bdea" 
+                      alt="Illustration & Motion" 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                   <p className="text-gray-600">Custom illustrations, infographics, animations, and motion graphics.</p>
                 </div>
               </div>
