@@ -36,7 +36,7 @@ export default function Hero({ className }: HeroProps) {
             </div>
             
             <p className="text-lg text-gray-600 md:text-xl md:pr-10 max-w-2xl leading-relaxed">
-              Your one-stop creative hub for digital printing, graphic design, 
+             Masslawry is a creative hub for digital printing, graphic design, 
               branding, web solutions, photography and 3D signs & fabrication. 
               We blend creativity with precision to bring your vision to life.
             </p>

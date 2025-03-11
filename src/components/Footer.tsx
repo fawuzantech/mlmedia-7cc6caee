@@ -68,12 +68,6 @@ export default function Footer() {
                 <Link to="/testimonials" className="text-gray-400 hover:text-white transition-colors">Testimonials</Link>
               </li>
               <li>
-                <Link to="/blog" className="text-gray-400 hover:text-white transition-colors">Blog</Link>
-              </li>
-              <li>
-                <Link to="/careers" className="text-gray-400 hover:text-white transition-colors">Careers</Link>
-              </li>
-              <li>
                 <Link to="/contact" className="text-gray-400 hover:text-white transition-colors">Contact</Link>
               </li>
             </ul>
@@ -84,11 +78,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start">
                 <MapPin size={18} className="mr-2 text-masslawry-orange mt-1 flex-shrink-0" />
-                <span className="text-gray-400">123 Creative Avenue, Accra, Ghana</span>
-              </li>
-              <li className="flex items-center">
-                <Phone size={18} className="mr-2 text-masslawry-orange flex-shrink-0" />
-                <span className="text-gray-400">+233 (0) 302 266 450</span>
+                <span className="text-gray-400">NII ALORTEY STREET, Accra, Ghana</span>
               </li>
               <li className="flex items-center">
                 <Phone size={18} className="mr-2 text-masslawry-orange flex-shrink-0" />
@@ -96,7 +86,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center">
                 <Mail size={18} className="mr-2 text-masslawry-orange flex-shrink-0" />
-                <a href="mailto:info@masslawry.com" className="text-gray-400 hover:text-white transition-colors">info@masslawry.com</a>
+                <a href="mailto:info@masslawry.com" className="text-gray-400 hover:text-white transition-colors">masslawry@gmail.com</a>
               </li>
             </ul>
           </div>
