@@ -46,9 +46,11 @@ export default function Navbar() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-2">
-            <span className="font-display text-2xl font-bold text-masslawry-blue">
-              <span className="text-masslawry-orange">M</span>asslawry
-            </span>
+            <img 
+              src="/lovable-uploads/0284b227-2af7-49a1-9313-5b8b321eceb7.png" 
+              alt="Masslawry Logo" 
+              className="h-10 md:h-12"
+            />
           </Link>
           
           {/* Desktop Navigation */}

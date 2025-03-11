@@ -8,9 +8,13 @@ export default function Footer() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           <div className="space-y-4">
-            <h2 className="text-2xl font-bold">
-              <span className="text-masslawry-orange">M</span>asslawry
-            </h2>
+            <div className="mb-2">
+              <img 
+                src="/lovable-uploads/0284b227-2af7-49a1-9313-5b8b321eceb7.png" 
+                alt="Masslawry Logo" 
+                className="h-10 md:h-12"
+              />
+            </div>
             <p className="text-gray-400 max-w-xs">
               Your creative partner for digital printing, design, branding, web solutions, photography and 3D signs & fabrication.
             </p>
