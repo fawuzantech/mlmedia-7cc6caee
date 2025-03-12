@@ -36,7 +36,7 @@ const WebSolutions = () => {
                   <p className="text-gray-600">Custom websites, e-commerce platforms, landing pages, and corporate sites.</p>
                 </div>
                 <div className="bg-gray-50 p-6 rounded-xl">
-                  <h3 className="font-bold text-lg mb-2">Web Applications</h3>
+                  <h3 className="font-bold text-lg mb-2">Web & Mobile Applications</h3>
                   <p className="text-gray-600">Custom web apps, dashboards, client portals, and SaaS solutions.</p>
                 </div>
                 <div className="bg-gray-50 p-6 rounded-xl">
