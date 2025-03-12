@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, ChevronDown, Home } from 'lucide-react';
@@ -172,5 +173,68 @@ export default function Navbar() {
                     <button 
                       onClick={() => setOpenDropdown(openDropdown === item.name ? null : item.name)}
                       className="flex items-center justify-between w-full text-lg font-medium"
-                   
-
+                    >
+                      <span>{item.name}</span>
+                      <ChevronDown className={cn(
+                        "h-5 w-5 transition-transform", 
+                        openDropdown === item.name && "rotate-180"
+                      )} />
+                    </button>
+                    
+                    <div className={cn(
+                      "grid transition-all duration-300 ease-in-out",
+                      openDropdown === item.name ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+                    )}>
+                      <div className="overflow-hidden">
+                        <div className="space-y-2 pt-2 pl-4">
+                          {item.dropdown.map((subItem) => (
+                            <Link
+                              key={subItem.name}
+                              to={subItem.path}
+                              className="flex items-center space-x-3 py-2"
+                              onClick={() => {
+                                setIsOpen(false);
+                                setOpenDropdown(null);
+                              }}
+                            >
+                              <div className="w-10 h-10 rounded-lg overflow-hidden flex-shrink-0">
+                                <img 
+                                  src={subItem.image} 
+                                  alt={subItem.name}
+                                  className="w-full h-full object-cover"
+                                />
+                              </div>
+                              <span className="text-sm">{subItem.name}</span>
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </>
+                ) : (
+                  <Link
+                    to={item.path}
+                    className="block text-lg font-medium"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                )}
+              </div>
+            ))}
+            
+            <Link
+              to="/contact"
+              className="block w-full py-3 text-center text-white bg-masslawry-blue hover:bg-masslawry-darkblue rounded-md transition-colors shadow-md"
+              onClick={() => setIsOpen(false)}
+            >
+              Get a Quote
+            </Link>
+          </div>
+        </div>
+      </nav>
+      
+      <FloatingHomeButton />
+    </>
+  );
+}
