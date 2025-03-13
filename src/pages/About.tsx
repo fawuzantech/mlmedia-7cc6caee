@@ -18,7 +18,7 @@ const About = () => {
             <div className="p-8">
               <h2 className="text-2xl font-bold mb-4">Our Story</h2>
               <p className="text-gray-700 mb-4">
-                Founded in 2015, Masslawry began as a small printing service with a vision to provide high-quality creative solutions to businesses of all sizes. Over the years, we've grown into a full-service creative agency, expanding our offerings to include graphic design, web development, branding, photography, and 3D fabrication.
+                Founded in 2011, Masslawry began as a small printing service with a vision to provide high-quality creative solutions to businesses of all sizes. Over the years, we've grown into a full-service creative agency, expanding our offerings to include graphic design, web development, branding, photography, and 3D fabrication.
               </p>
               <p className="text-gray-700 mb-4">
                 Our journey has been driven by a passion for creativity and a commitment to excellence. We believe that great design has the power to transform businesses and create meaningful connections with audiences.
@@ -64,7 +64,7 @@ const About = () => {
     <div className="bg-white rounded-xl shadow-sm overflow-hidden">
       <img src="/uploads/member1.jpg" alt="John Doe" className="h-48 w-full object-cover bg-gray-200" />
       <div className="p-4">
-        <h3 className="font-bold mb-1">John Doe</h3>
+        <h3 className="font-bold mb-1">Susana Bonney</h3>
         <p className="text-sm text-gray-600 mb-2">Creative Director</p>
       </div>
     </div>
@@ -73,7 +73,7 @@ const About = () => {
     <div className="bg-white rounded-xl shadow-sm overflow-hidden">
       <img src="/uploads/member2.jpg" alt="Jane Smith" className="h-48 w-full object-cover bg-gray-200" />
       <div className="p-4">
-        <h3 className="font-bold mb-1">Jane Smith</h3>
+        <h3 className="font-bold mb-1">  Benjamin Gyannor</h3>
         <p className="text-sm text-gray-600 mb-2">Marketing Lead</p>
       </div>
     </div>
@@ -82,7 +82,7 @@ const About = () => {
     <div className="bg-white rounded-xl shadow-sm overflow-hidden">
       <img src="/uploads/member3.jpg" alt="Alice Johnson" className="h-48 w-full object-cover bg-gray-200" />
       <div className="p-4">
-        <h3 className="font-bold mb-1">Alice Johnson</h3>
+        <h3 className="font-bold mb-1">Nyaaba</h3>
         <p className="text-sm text-gray-600 mb-2">Product Manager</p>
       </div>
     </div>
