@@ -195,18 +195,7 @@ const About = () => {
                 </div>
               </div>
 
-              {/* Join Our Team Card */}
-              <div className="bg-gradient-to-br from-blue-600 to-blue-800 rounded-xl shadow-md overflow-hidden flex flex-col justify-center items-center text-center p-8 text-white">
-                <h3 className="font-bold text-xl mb-4">Join Our Team</h3>
-                <p className="mb-6">We're always looking for talented individuals to join our creative family</p>
-                <Link
-                  to="/careers"
-                  className="inline-flex items-center px-4 py-2 bg-white text-blue-600 rounded-lg font-medium hover:bg-blue-50 transition-colors"
-                >
-                  View Openings
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </div>
+      
             </div>
           </div>
 
