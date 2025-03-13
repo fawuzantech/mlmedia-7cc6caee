@@ -7,7 +7,6 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
-  const [timeoutId, setTimeoutId] = useState<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -44,18 +43,14 @@ export default function Navbar() {
   };
 
   const handleMouseEnter = (name: string) => {
-    if (timeoutId) {
-      clearTimeout(timeoutId);
-      setTimeoutId(null);
-    }
     setOpenDropdown(name);
   };
 
   const handleMouseLeave = () => {
-    const id = setTimeout(() => {
+    // Delay closing to allow cursor movement to dropdown
+    setTimeout(() => {
       setOpenDropdown(null);
-    }, 200); // 200ms delay before closing
-    setTimeoutId(id);
+    }, 100); // Reduced delay for smoother experience
   };
 
   const FloatingHomeButton = () => (
@@ -93,31 +88,30 @@ export default function Navbar() {
             {/* Desktop Menu */}
             <div className="hidden md:flex md:items-center md:space-x-8">
               {navItems.map((item) => (
-                <div
-                  key={item.name}
-                  className="relative group"
-                  onMouseEnter={() => item.dropdown && handleMouseEnter(item.name)}
-                  onMouseLeave={() => item.dropdown && handleMouseLeave()}
-                >
+                <div key={item.name} className="relative">
                   {item.dropdown ? (
-                    <>
-                      <div
-                        className="relative cursor-pointer flex items-center space-x-1 text-sm font-medium text-gray-700 hover:text-orange-500 transition-colors"
-                      >
+                    <div
+                      className="relative"
+                      onMouseEnter={() => handleMouseEnter(item.name)}
+                      onMouseLeave={handleMouseLeave}
+                    >
+                      <div className="flex items-center space-x-1 text-sm font-medium text-gray-700 hover:text-orange-500 transition-colors cursor-pointer">
                         <span>{item.name}</span>
                         <ChevronDown className="h-4 w-4" />
                       </div>
 
-                      {(openDropdown === item.name || openDropdown === item.name) && (
+                      {openDropdown === item.name && (
                         <div
-                          className="absolute top-full left-0 mt-2 w-72 rounded-lg bg-white shadow-lg transition-all duration-300 transform opacity-0 group-hover:opacity-100 group-hover:translate-y-0 translate-y-2 pointer-events-none group-hover:pointer-events-auto"
+                          className="absolute top-full left-0 mt-2 w-72 rounded-lg bg-white shadow-lg transition-all duration-300 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 pointer-events-none group-hover:pointer-events-auto"
+                          onMouseEnter={() => handleMouseEnter(item.name)}
+                          onMouseLeave={handleMouseLeave}
                         >
                           <div className="py-2">
                             {item.dropdown.map((subItem) => (
                               <Link
                                 key={subItem.name}
                                 to={subItem.path}
-                                className="flex items-center px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 transition-colors"
+                                className="flex items-center px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 transition-colors block"
                                 onClick={() => setOpenDropdown(null)}
                               >
                                 <span>{subItem.name}</span>
@@ -126,7 +120,7 @@ export default function Navbar() {
                           </div>
                         </div>
                       )}
-                    </>
+                    </div>
                   ) : (
                     <Link
                       to={item.path}
