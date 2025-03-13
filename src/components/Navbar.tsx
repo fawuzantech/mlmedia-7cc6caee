@@ -1,23 +1,25 @@
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { Menu, X, ChevronDown, Home } from "lucide-react";
-import { cn } from "@/lib/utils";
+"use client"
+
+import { useState, useEffect } from "react"
+import { Link } from "react-router-dom"
+import { Menu, X, ChevronDown, Home } from "lucide-react"
+import { cn } from "@/lib/utils"
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [scrollPosition, setScrollPosition] = useState(0);
-  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [isOpen, setIsOpen] = useState(false)
+  const [scrollPosition, setScrollPosition] = useState(0)
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null)
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrollPosition(window.scrollY);
-    };
+      setScrollPosition(window.scrollY)
+    }
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll)
     return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
 
   const navItems = [
     { name: "Home", path: "/" },
@@ -36,22 +38,11 @@ export default function Navbar() {
     { name: "Portfolio", path: "/portfolio" },
     { name: "About", path: "/about" },
     { name: "Contact", path: "/contact" },
-  ];
+  ]
 
   const toggleDropdown = (name: string) => {
-    setOpenDropdown(openDropdown === name ? null : name);
-  };
-
-  const handleMouseEnter = (name: string) => {
-    setOpenDropdown(name);
-  };
-
-  const handleMouseLeave = () => {
-    // Delay closing to allow cursor movement to dropdown
-    setTimeout(() => {
-      setOpenDropdown(null);
-    }, 100); // Reduced delay for smoother experience
-  };
+    setOpenDropdown(openDropdown === name ? null : name)
+  }
 
   const FloatingHomeButton = () => (
     <Link
@@ -61,7 +52,7 @@ export default function Navbar() {
     >
       <Home className="h-6 w-6" />
     </Link>
-  );
+  )
 
   return (
     <>
@@ -69,9 +60,7 @@ export default function Navbar() {
       <nav
         className={cn(
           "fixed top-0 w-full z-50 transition-all duration-300",
-          scrollPosition > 50
-            ? "py-2 bg-white/80 backdrop-blur-md shadow-sm"
-            : "py-6 bg-transparent"
+          scrollPosition > 50 ? "py-2 bg-white/80 backdrop-blur-md shadow-sm" : "py-6 bg-transparent",
         )}
       >
         <div className="container mx-auto px-4 md:px-6">
@@ -90,36 +79,28 @@ export default function Navbar() {
               {navItems.map((item) => (
                 <div key={item.name} className="relative">
                   {item.dropdown ? (
-                    <div
-                      className="relative"
-                      onMouseEnter={() => handleMouseEnter(item.name)}
-                      onMouseLeave={handleMouseLeave}
-                    >
-                      <div className="flex items-center space-x-1 text-sm font-medium text-gray-700 hover:text-orange-500 transition-colors cursor-pointer">
+                    <div className="relative group">
+                      <div
+                        className="flex items-center space-x-1 text-sm font-medium text-gray-700 hover:text-orange-500 transition-colors cursor-pointer"
+                        onClick={() => toggleDropdown(item.name)}
+                      >
                         <span>{item.name}</span>
                         <ChevronDown className="h-4 w-4" />
                       </div>
 
-                      {openDropdown === item.name && (
-                        <div
-                          className="absolute top-full left-0 mt-2 w-72 rounded-lg bg-white shadow-lg transition-all duration-300 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 pointer-events-none group-hover:pointer-events-auto"
-                          onMouseEnter={() => handleMouseEnter(item.name)}
-                          onMouseLeave={handleMouseLeave}
-                        >
-                          <div className="py-2">
-                            {item.dropdown.map((subItem) => (
-                              <Link
-                                key={subItem.name}
-                                to={subItem.path}
-                                className="flex items-center px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 transition-colors block"
-                                onClick={() => setOpenDropdown(null)}
-                              >
-                                <span>{subItem.name}</span>
-                              </Link>
-                            ))}
-                          </div>
+                      <div className="absolute top-full left-0 mt-1 w-72 rounded-lg bg-white shadow-lg transition-all duration-300 z-50 invisible group-hover:visible">
+                        <div className="py-2">
+                          {item.dropdown.map((subItem) => (
+                            <Link
+                              key={subItem.name}
+                              to={subItem.path}
+                              className="flex items-center px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 transition-colors block"
+                            >
+                              <span>{subItem.name}</span>
+                            </Link>
+                          ))}
                         </div>
-                      )}
+                      </div>
                     </div>
                   ) : (
                     <Link
@@ -151,7 +132,7 @@ export default function Navbar() {
         <div
           className={cn(
             "md:hidden fixed inset-0 bg-white z-40 transition-all duration-300 ease-in-out transform",
-            isOpen ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"
+            isOpen ? "translate-x-0 opacity-100" : "translate-x-full opacity-0",
           )}
           style={{ top: "64px" }}
         >
@@ -166,10 +147,7 @@ export default function Navbar() {
                     >
                       <span>{item.name}</span>
                       <ChevronDown
-                        className={cn(
-                          "h-5 w-5 transition-transform",
-                          openDropdown === item.name && "rotate-180"
-                        )}
+                        className={cn("h-5 w-5 transition-transform", openDropdown === item.name && "rotate-180")}
                       />
                     </button>
 
@@ -181,8 +159,8 @@ export default function Navbar() {
                             to={subItem.path}
                             className="flex items-center space-x-3 py-2 text-sm text-gray-700"
                             onClick={() => {
-                              setIsOpen(false);
-                              setOpenDropdown(null);
+                              setIsOpen(false)
+                              setOpenDropdown(null)
                             }}
                           >
                             <span>{subItem.name}</span>
@@ -216,5 +194,6 @@ export default function Navbar() {
 
       <FloatingHomeButton />
     </>
-  );
+  )
 }
+
