@@ -20,6 +20,7 @@ const portfolioItems = [
     images: [
       "/lovable-uploads/naa/WhatsApp Image 2025-03-09 at 11.04.33_7067350c.jpg",
       "/lovable-uploads/naa/WhatsApp Image 2025-03-09 at 11.04.33_b8c4ce5f.jpg",
+      "/lovable-uploads/naa/graphic_design_sample_01.jpg"
     ],
   },
   {
