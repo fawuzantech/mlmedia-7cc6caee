@@ -30,15 +30,15 @@ export default function Hero({ className }: HeroProps) {
                 <span className="text-sm text-gray-600 font-medium">MASSLAWRY MULTIMEDIA</span>
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
-                Creative solutions<br />
-                with <span className="text-gradient">premium quality</span>
+                  Qualitative solutions<br />
+                with <span className="text-gradient"> and fast timely delivery</span>
               </h1>
             </div>
             
             <p className="text-lg text-gray-600 md:text-xl md:pr-10 max-w-2xl leading-relaxed">
-             Masslawry is a creative hub for digital printing, graphic design, 
+             Masslawry is cutting edge Multimedia and E-solution that focuses on hiqhly qualitative  and timely delivery of services such as Digital printing, graphic design, 
               branding, web solutions, photography and 3D signs & fabrication. 
-              We blend creativity with precision to bring your vision to life.
+              We blend state-of-the-art technology with scheduled time ranges to bring your vision to life.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
