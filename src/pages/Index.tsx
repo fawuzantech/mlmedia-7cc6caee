@@ -4,6 +4,7 @@ import Services from "@/components/Services";
 import Featured from "@/components/Featured";
 import Testimonials from "@/components/Testimonials";
 import CTA from "@/components/CTA";
+import FloatingButton from '../components/ui/FloatingButton'
 import ScrollToTop from "@/components/ScrollToTop";
 
 const Index = () => {
@@ -15,6 +16,7 @@ const Index = () => {
       <Testimonials />
       <CTA />
       <ScrollToTop />
+      <FloatingButton />
     </div>
   );
 };

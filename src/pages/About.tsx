@@ -56,20 +56,40 @@ const About = () => {
             </div>
           </div>
           
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold mb-8 text-center">Our Team</h2>
-            <div className="grid md:grid-cols-4 gap-6">
-              {[1, 2, 3, 4].map((index) => (
-                <div key={index} className="bg-white rounded-xl shadow-sm overflow-hidden">
-                  <div className="h-48 bg-gray-200"></div>
-                  <div className="p-4">
-                    <h3 className="font-bold mb-1">Team Member {index}</h3>
-                    <p className="text-sm text-gray-600 mb-2">Creative Director</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+  <div className="mb-16">
+  <h2 className="text-3xl font-bold mb-8 text-center">Our Team</h2>
+  <div className="grid md:grid-cols-4 gap-6">
+    
+    {/* Team Member 1 */}
+    <div className="bg-white rounded-xl shadow-sm overflow-hidden">
+      <img src="/uploads/member1.jpg" alt="John Doe" className="h-48 w-full object-cover bg-gray-200" />
+      <div className="p-4">
+        <h3 className="font-bold mb-1">John Doe</h3>
+        <p className="text-sm text-gray-600 mb-2">Creative Director</p>
+      </div>
+    </div>
+
+    {/* Team Member 2 */}
+    <div className="bg-white rounded-xl shadow-sm overflow-hidden">
+      <img src="/uploads/member2.jpg" alt="Jane Smith" className="h-48 w-full object-cover bg-gray-200" />
+      <div className="p-4">
+        <h3 className="font-bold mb-1">Jane Smith</h3>
+        <p className="text-sm text-gray-600 mb-2">Marketing Lead</p>
+      </div>
+    </div>
+
+    {/* Team Member 3 */}
+    <div className="bg-white rounded-xl shadow-sm overflow-hidden">
+      <img src="/uploads/member3.jpg" alt="Alice Johnson" className="h-48 w-full object-cover bg-gray-200" />
+      <div className="p-4">
+        <h3 className="font-bold mb-1">Alice Johnson</h3>
+        <p className="text-sm text-gray-600 mb-2">Product Manager</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
           
           <div className="text-center">
             <Link 
