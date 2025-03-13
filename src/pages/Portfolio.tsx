@@ -9,54 +9,47 @@ const portfolioItems = [
     category: "Digital Printing",
     description: "High-quality digital prints for various business and personal needs.",
     images: [
-      "https://source.unsplash.com/600x400/?printing,design",
-      "https://source.unsplash.com/600x400/?poster,advertisement",
-      "https://source.unsplash.com/600x400/?flyer,brochure",
+      "/lovable-uploads/58388015-ac09-41ff-bdab-454600db3a85.png",
+      "/lovable-uploads/615e1682-4ec3-4b80-9068-56d371fa90d6.png",
+      "/lovable-uploads/naa/WhatsApp Image 2025-03-09 at 11.04.31_874c20ec.jpg",
     ],
   },
   {
     category: "Graphic Design & 3D Modeling",
     description: "Creative design and 3D modeling for branding, products, and visualization.",
     images: [
-      "https://source.unsplash.com/600x400/?graphicdesign,illustration",
-      "https://source.unsplash.com/600x400/?3dmodeling,art",
-      "https://source.unsplash.com/600x400/?logo,branding",
+      "/lovable-uploads/naa/WhatsApp Image 2025-03-09 at 11.04.33_7067350c.jpg",
+      "/lovable-uploads/naa/WhatsApp Image 2025-03-09 at 11.04.33_b8c4ce5f.jpg",
     ],
   },
   {
     category: "Branding & Souvenirs",
     description: "Custom branding materials, promotional items, and souvenirs.",
     images: [
-      "https://source.unsplash.com/600x400/?branding,packaging",
-      "https://source.unsplash.com/600x400/?corporategifts,souvenirs",
-      "https://source.unsplash.com/600x400/?merchandise,custom",
+      "/lovable-uploads/naa/WhatsApp Image 2025-03-09 at 11.04.33_14981e58.jpg",
+      "/lovable-uploads/naa/WhatsApp Image 2025-03-09 at 11.04.31_1a053403.jpg",
     ],
   },
   {
     category: "Web Solutions / E-Solutions",
     description: "Modern websites and digital solutions tailored for business growth.",
     images: [
-      "https://source.unsplash.com/600x400/?webdesign,uiux",
-      "https://source.unsplash.com/600x400/?coding,technology",
-      "https://source.unsplash.com/600x400/?website,development",
+      "/lovable-uploads/naa/docs/IMG-20250309-WA0013.jpg"
     ],
   },
   {
     category: "Photography",
     description: "Professional photography services capturing key moments and branding shots.",
     images: [
-      "https://source.unsplash.com/600x400/?photography,portrait",
-      "https://source.unsplash.com/600x400/?photoshoot,studio",
-      "https://source.unsplash.com/600x400/?camera,creative",
+     "/lovable-uploads/naa/docs/photography.jpg",
     ],
   },
   {
     category: "3D/2D Signs & Fabrication",
     description: "Custom signs, illuminated designs, and fabrication for businesses.",
     images: [
-      "https://source.unsplash.com/600x400/?signage,storefront",
-      "https://source.unsplash.com/600x400/?3dsign,led",
-      "https://source.unsplash.com/600x400/?fabrication,neonsign",
+      "/lovable-uploads/naa/WhatsApp Image 2025-03-09 at 11.04.35_29148d97.jpg",
+      "lovable-uploads/naa/WhatsApp Image 2025-03-09 at 11.04.31_874c20ec.jpg",
     ],
   },
 ]

@@ -8,14 +8,6 @@ export default function Testimonials() {
   
   const testimonials = [
     {
-      id: 1,
-      name: "Sarah Johnson",
-      role: "Marketing Director, TechStart",
-      content: "Working with Masslawry was a game-changer for our brand. Their attention to detail and creative approach truly elevated our marketing materials. The team was responsive, professional, and delivered exceptional results.",
-      rating: 5,
-      image: "/lovable-uploads/d33ea231-5f72-4688-8bab-b767808235d2.png" 
-    },
-    {
       id: 2,
       name: "Daniel Mensah",
       role: "CEO, GreenGrow Ventures",

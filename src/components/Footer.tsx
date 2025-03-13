@@ -90,7 +90,6 @@ export default function Footer() {
                 { name: "About Us", path: "/about" },
                 { name: "Portfolio", path: "/portfolio" },
                 { name: "Testimonials", path: "/testimonials" },
-                { name: "Careers", path: "/careers" },
                 { name: "Contact", path: "/contact" },
               ].map((item, index) => (
                 <li key={index}>

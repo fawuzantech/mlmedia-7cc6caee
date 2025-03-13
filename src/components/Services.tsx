@@ -43,28 +43,28 @@ export default function Services() {
       title: "Digital Printing",
       description: "High-quality printing services including large format, merchandising, and custom materials.",
       link: "/services/digital-printing",
-      image: "https://images.unsplash.com/photo-1562654501-a0ccc0fc3fb1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+      image: "/lovable-uploads/naa/WhatsApp Image 2025-03-09 at 11.04.29_9c2a186d.jpg"
     },
     {
       icon: <Paintbrush strokeWidth={1.5} />,
       title: "Graphic Design & 3D Modeling",
       description: "Creative design solutions including logos, branding materials, and 3D visualizations.",
       link: "/services/graphic-design",
-      image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+      image: "/lovable-uploads/naa/WhatsApp Image 2025-03-09 at 11.04.35_29148d97.jpg"
     },
     {
       icon: <Box strokeWidth={1.5} />,
       title: "Branding & Souvenirs",
       description: "Complete branding packages and custom souvenirs to elevate your brand identity.",
       link: "/services/branding",
-      image: "https://images.unsplash.com/photo-1523292562811-8fa7962a78c8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+      image: "/lovable-uploads/naa/branding_corporate_01.jpg"
     },
     {
       icon: <Globe strokeWidth={1.5} />,
       title: "Web Solutions",
       description: "Custom websites, applications, and digital experiences built with modern technologies.",
       link: "/services/web-solutions",
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+      image: "/lovable-uploads/naa/docs/IMG-20250309-WA0013.jpg"
     },
     {
       icon: <Camera strokeWidth={1.5} />,
@@ -78,7 +78,7 @@ export default function Services() {
       title: "3D Signs & Fabrication",
       description: "Custom signage, displays, and fabrication services to make your brand stand out.",
       link: "/services/3d-signs",
-      image: "https://images.unsplash.com/photo-1535970793482-07de93762dc4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+      image: "/lovable-uploads/naa/WhatsApp Image 2025-03-09 at 11.04.30_396783ff.jpg"
     }
   ];
 
