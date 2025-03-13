@@ -59,49 +59,56 @@ const portfolioItems = [
 ];
 
 const Portfolio = () => {
-  const [openCategory, setOpenCategory] = useState<string | null>(null);
-
-  const toggleCategory = (category: string) => {
-    setOpenCategory(openCategory === category ? null : category);
-  };
+  const [hoveredCategory, setHoveredCategory] = useState<string | null>(null);
 
   return (
-    <section className="py-20 bg-gray-100">
-      <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-12">Our Portfolio</h2>
+    <section className="py-20 bg-gradient-to-b from-gray-50 to-gray-100">
+      <div className="container mx-auto px-4 md:px-6">
+        <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-800 mb-12 animate-fade-in">
+          Our Portfolio
+        </h2>
 
-        <div className="max-w-4xl mx-auto space-y-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {portfolioItems.map((service, index) => (
-            <div key={index} className="bg-white shadow-lg rounded-lg">
-              {/* Header Section */}
-              <button
-                onClick={() => toggleCategory(service.category)}
-                className="w-full text-left px-6 py-4 flex justify-between items-center hover:bg-gray-200 transition-all rounded-t-lg"
-              >
-                <div>
-                  <h3 className="text-2xl font-semibold">{service.category}</h3>
-                  <p className="text-gray-600 text-sm">{service.description}</p>
+            <div
+              key={index}
+              className="relative bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-2xl group"
+              onMouseEnter={() => setHoveredCategory(service.category)}
+              onMouseLeave={() => setHoveredCategory(null)}
+            >
+              {/* Main Image with Overlay */}
+              <div className="relative h-64 w-full overflow-hidden">
+                <img
+                  src={service.images[0]}
+                  alt={`${service.category} preview`}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <h3 className="text-2xl font-semibold text-white px-4 text-center">
+                    {service.category}
+                  </h3>
                 </div>
-                {openCategory === service.category ? (
-                  <ChevronUp className="w-6 h-6 text-gray-600" />
-                ) : (
-                  <ChevronDown className="w-6 h-6 text-gray-600" />
-                )}
-              </button>
+              </div>
 
-              {/* Images Section (Only visible when expanded) */}
-              {openCategory === service.category && (
-                <div className="grid md:grid-cols-3 gap-4 p-6 border-t">
-                  {service.images.map((image, i) => (
+              {/* Description (Visible on Hover) */}
+              <div
+                className={cn(
+                  "p-6 bg-white transition-all duration-300",
+                  hoveredCategory === service.category ? "opacity-100 h-auto" : "opacity-0 h-0"
+                )}
+              >
+                <p className="text-gray-600 text-sm mb-4">{service.description}</p>
+                <div className="grid grid-cols-2 gap-4">
+                  {service.images.slice(1).map((image, i) => (
                     <img
                       key={i}
                       src={image}
-                      alt={`${service.category} ${i + 1}`}
-                      className="rounded-lg shadow-md w-full h-48 object-cover"
+                      alt={`${service.category} ${i + 2}`}
+                      className="rounded-lg shadow-md w-full h-32 object-cover hover:scale-105 transition-transform duration-300"
                     />
                   ))}
                 </div>
-              )}
+              </div>
             </div>
           ))}
         </div>
