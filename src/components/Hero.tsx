@@ -24,9 +24,7 @@ export default function Hero({ className }: HeroProps) {
                 <span className="text-sm font-medium">MASSLAWRY MULTIMEDIA</span>
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
-                American Quality,
-                <br />
-                <span className="text-masslawry-orange">Chinese Prices</span>
+                Quality Services on Timely Delivery
               </h1>
             </div>
             
