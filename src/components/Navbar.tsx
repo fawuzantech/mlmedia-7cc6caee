@@ -2,13 +2,12 @@
 
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
-import { Menu, X, ChevronDown, Home } from "lucide-react"
+import { Menu, X } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrollPosition, setScrollPosition] = useState(0)
-  const [openDropdown, setOpenDropdown] = useState<string | null>(null)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,36 +22,10 @@ export default function Navbar() {
 
   const navItems = [
     { name: "Home", path: "/" },
-    {
-      name: "Services",
-      path: "/services",
-      dropdown: [
-        { name: "Digital Printing", path: "/services/digital-printing" },
-        { name: "Graphic Design", path: "/services/graphic-design" },
-        { name: "Branding", path: "/services/branding" },
-        { name: "Web Solutions", path: "/services/web-solutions" },
-        { name: "Photography", path: "/services/photography" },
-        { name: "3D Signs & Fabrication", path: "/services/3d-signs" },
-      ],
-    },
-    { name: "Portfolio", path: "/portfolio" },
+    { name: "What We Do", path: "/portfolio" },
     { name: "About", path: "/about" },
     { name: "Contact", path: "/contact" },
   ]
-
-  const toggleDropdown = (name: string) => {
-    setOpenDropdown(openDropdown === name ? null : name)
-  }
-
-  const FloatingHomeButton = () => (
-    <Link
-      to="/"
-      className="fixed bottom-8 right-8 p-3 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition-all duration-300 z-50"
-      aria-label="Back to Home"
-    >
-      <Home className="h-6 w-6" />
-    </Link>
-  )
 
   return (
     <>
@@ -77,42 +50,14 @@ export default function Navbar() {
             {/* Desktop Menu */}
             <div className="hidden md:flex md:items-center md:space-x-8">
               {navItems.map((item) => (
-                <div key={item.name} className="relative">
-                  {item.dropdown ? (
-                    <div className="relative group">
-                      <div
-                        className="flex items-center space-x-1 text-sm font-medium text-gray-700 hover:text-orange-500 transition-colors cursor-pointer"
-                        onClick={() => toggleDropdown(item.name)}
-                      >
-                        <span>{item.name}</span>
-                        <ChevronDown className="h-4 w-4" />
-                      </div>
-
-                      <div className="absolute top-full left-0 mt-1 w-72 rounded-lg bg-white shadow-lg transition-all duration-300 z-50 invisible group-hover:visible">
-                        <div className="py-2">
-                          {item.dropdown.map((subItem) => (
-                            <Link
-                              key={subItem.name}
-                              to={subItem.path}
-                              className="flex items-center px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 transition-colors block"
-                            >
-                              <span>{subItem.name}</span>
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                  ) : (
-                    <Link
-                      to={item.path}
-                      className="text-sm font-medium text-gray-700 hover:text-orange-500 transition-colors"
-                    >
-                      {item.name}
-                    </Link>
-                  )}
-                </div>
+                <Link
+                  key={item.name}
+                  to={item.path}
+                  className="text-sm font-medium text-gray-700 hover:text-orange-500 transition-colors"
+                >
+                  {item.name}
+                </Link>
               ))}
-
               <Link
                 to="/contact"
                 className="px-5 py-2 text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-md transition-colors shadow-md hover:shadow-lg"
@@ -138,49 +83,15 @@ export default function Navbar() {
         >
           <div className="container mx-auto px-4 py-6 space-y-6">
             {navItems.map((item) => (
-              <div key={item.name} className="space-y-2">
-                {item.dropdown ? (
-                  <>
-                    <button
-                      onClick={() => toggleDropdown(item.name)}
-                      className="flex items-center justify-between w-full text-lg font-medium text-gray-700"
-                    >
-                      <span>{item.name}</span>
-                      <ChevronDown
-                        className={cn("h-5 w-5 transition-transform", openDropdown === item.name && "rotate-180")}
-                      />
-                    </button>
-
-                    {openDropdown === item.name && (
-                      <div className="pl-4 space-y-2">
-                        {item.dropdown.map((subItem) => (
-                          <Link
-                            key={subItem.name}
-                            to={subItem.path}
-                            className="flex items-center space-x-3 py-2 text-sm text-gray-700"
-                            onClick={() => {
-                              setIsOpen(false)
-                              setOpenDropdown(null)
-                            }}
-                          >
-                            <span>{subItem.name}</span>
-                          </Link>
-                        ))}
-                      </div>
-                    )}
-                  </>
-                ) : (
-                  <Link
-                    to={item.path}
-                    className="block text-lg font-medium text-gray-700"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {item.name}
-                  </Link>
-                )}
-              </div>
+              <Link
+                key={item.name}
+                to={item.path}
+                className="block text-lg font-medium text-gray-700"
+                onClick={() => setIsOpen(false)}
+              >
+                {item.name}
+              </Link>
             ))}
-
             <Link
               to="/contact"
               className="block w-full py-3 text-center text-white bg-blue-600 hover:bg-blue-700 rounded-md transition-colors shadow-md"
@@ -191,8 +102,6 @@ export default function Navbar() {
           </div>
         </div>
       </nav>
-
-      <FloatingHomeButton />
     </>
   )
 }

@@ -88,7 +88,7 @@ export default function Footer() {
             <ul className="space-y-3">
               {[
                 { name: "About Us", path: "/about" },
-                { name: "Portfolio", path: "/portfolio" },
+                { name: "What We Do", path: "/portfolio" },
                 { name: "Testimonials", path: "/testimonials" },
                 { name: "Contact", path: "/contact" },
               ].map((item, index) => (
