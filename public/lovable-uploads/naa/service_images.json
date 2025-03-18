@@ -1,0 +1,21 @@
+{
+  "images": {
+    "print_house": "/lovable-uploads/naa/print_house.jpg",
+    "perception_creative": "/lovable-uploads/naa/perception_creative.jpg",
+    "multimedia": "/lovable-uploads/naa/multimedia.jpg",
+    "souvenirs": "/lovable-uploads/naa/souvenirs.jpg",
+    "office_staff": "/lovable-uploads/naa/office_staff.jpg",
+    "btl_events": "/lovable-uploads/naa/btl_events.jpg",
+    "bello_sign": "/lovable-uploads/naa/bello_sign.jpg",
+    "blue_sign": "/lovable-uploads/naa/blue_sign.jpg"
+  },
+  "description": "These images show real examples of our services at Masslawry Multimedia.",
+  "mappings": {
+    "digital-printing": ["print_house", "perception_creative"],
+    "graphic-design": ["perception_creative", "multimedia"],
+    "branding": ["souvenirs"],
+    "web-solutions": ["multimedia", "office_staff"],
+    "photography": ["btl_events", "multimedia"],
+    "signages": ["bello_sign", "blue_sign"]
+  }
+} 

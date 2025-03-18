@@ -22,7 +22,8 @@ export default function Navbar() {
 
   const navItems = [
     { name: "Home", path: "/" },
-    { name: "What We Do", path: "/portfolio" },
+    { name: "Services", path: "/services" },
+    { name: "Portfolio", path: "/portfolio" },
     { name: "About", path: "/about" },
     { name: "Contact", path: "/contact" },
   ]
@@ -53,14 +54,23 @@ export default function Navbar() {
                 <Link
                   key={item.name}
                   to={item.path}
-                  className="text-sm font-medium text-gray-700 hover:text-orange-500 transition-colors"
+                  className="text-sm font-medium text-gray-700 hover:text-masslawry-orange transition-colors"
+                  onClick={(e) => {
+                    if (item.path.startsWith("#")) {
+                      e.preventDefault();
+                      const section = document.querySelector(item.path);
+                      if (section) {
+                        section.scrollIntoView({ behavior: "smooth" });
+                      }
+                    }
+                  }}
                 >
                   {item.name}
                 </Link>
               ))}
               <Link
                 to="/contact"
-                className="px-5 py-2 text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-md transition-colors shadow-md hover:shadow-lg"
+                className="px-5 py-2 text-sm font-medium text-white bg-masslawry-blue hover:bg-masslawry-darkblue rounded-md transition-colors shadow-md hover:shadow-lg"
               >
                 Get a Quote
               </Link>
@@ -94,7 +104,7 @@ export default function Navbar() {
             ))}
             <Link
               to="/contact"
-              className="block w-full py-3 text-center text-white bg-blue-600 hover:bg-blue-700 rounded-md transition-colors shadow-md"
+              className="block w-full py-3 text-center text-white bg-masslawry-blue hover:bg-masslawry-darkblue rounded-md transition-colors shadow-md"
               onClick={() => setIsOpen(false)}
             >
               Get a Quote
